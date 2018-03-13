@@ -24,7 +24,7 @@ async append(text) {
 Promise.all(append('FOO'), append('BAR'))
 ```
 
-# Timeout
+## Timeout
 
 If timeout is set, the lock will be released automatically when time is out, to avoid the case that locks never get released.
 
@@ -37,7 +37,7 @@ async append(text) {
 }
 ```
 
-# Limit
+## Limit
 
 If limit is set a positive integer, the lock will not block unless the unreleased number reached the limit.
 
