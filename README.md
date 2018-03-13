@@ -4,7 +4,7 @@
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 
-The thread like locks in async functions
+Thread like locks in async functions
 
 # Why
 
