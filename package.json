@@ -1,0 +1,44 @@
+{
+  "name": "async-locks",
+  "version": "1.0.0",
+  "description": "Locks in async-await style codes.",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 7.6"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint index.js",
+    "test:clear-env": "npm unlink async-locks && npm unlink && npm install",
+    "test:prepare-env": "npm link && npm link async-locks",
+    "pretest": "npm run test:clear-env && npm run lint && npm run test:prepare-env",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should --recursive test",
+    "posttest": "npm run test:clear-env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viRingbells/async-locks.git"
+  },
+  "keywords": [
+    "lock",
+    "async",
+    "await"
+  ],
+  "author": "Sun Haohao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viRingbells/async-locks/issues"
+  },
+  "homepage": "https://github.com/viRingbells/async-locks#readme",
+  "dependencies": {
+    "crypto-random-string": "^1.0.0",
+    "debug": "^3.1.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-plugin-spellcheck": "0.0.10",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.0.4",
+    "should": "^13.2.1"
+  }
+}
